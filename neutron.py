@@ -123,11 +123,11 @@ while running:
     text("Neutrons: " + str(len(neutrons)), text_font, (0, 128, 0), 0, 650)
     text("Atoms: " + str(len(atoms)), text_font, (0, 128, 0), 0, 700)
     text("New neutrons \nfrom the fission: " + str(green_neutron_counter), text_font, (0, 128, 0), 0, 750)
-    text("|-------------------------------------CONTROLS-----------------------------------------------|", text_font2, (0, 128, 0), 0, 600)
+    text("|--STATUS---------------------------CONTROLS--------------------------------------------|", text_font2, (0, 128, 0), 0, 600)
     text("|\n|\n|\n|\n|\n|\n|\n|\n|\n|\n|\n|\n|\n|\n|\n|\n|\n|\n|", text_font2, (0, 128, 0), 280, 615)
-    text("                  change game mode:\n 'f' for nuclear reactor mode (atoms dont move)\n and 'r' for gas mode (atoms move)", text_font2, (0, 128, 0), 300, 630)
+    text("                  change game mode:\n 'f' for changing modes, nuclear reactor mode\n(atoms dont move)\nand gas mode(atoms move)", text_font2, (0, 128, 0), 300, 630)
     if len(atoms) == 0:
-        text("            All atoms have been hit!\n                thank's for playing!\n            change modes or restart!\n", text_font2, (0, 128, 0), 300, 720)
+        text("         All atoms have been hit!\n          thank's for playing! change modes or restart by\n          pressing 'r'!\n", text_font2, (0, 128, 0), 250, 750)
     text("simulation by: Rih Mohamed Islam", text_font2, (r, g, b), 480, 820)
     #for every neutron in that list i update his position and check if he hit the wall!
     for neutron in neutrons:
@@ -139,7 +139,6 @@ while running:
         if neutron["y"] >= 595 or neutron["y"] <= 5:
             hit.play()
             neutron["yv"] = -neutron["yv"]
-        # in here i needed to put [:] to avoid an index error when i remove an atom while iterating
         for atom in atoms[:]:
             if colide(neutron, atom) and len(atoms) != 0:
                 atom_hit.play()
