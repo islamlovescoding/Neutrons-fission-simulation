@@ -139,6 +139,7 @@ while running:
         if neutron["y"] >= 595 or neutron["y"] <= 5:
             hit.play()
             neutron["yv"] = -neutron["yv"]
+        # in here i needed to put [:] to avoid an index error when i remove an atom while iterating
         for atom in atoms[:]:
             if colide(neutron, atom) and len(atoms) != 0:
                 atom_hit.play()
