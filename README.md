@@ -12,12 +12,12 @@ it's also my first project !
 
 ## controls
 
- `F` change modes
+ `F` change modes |
  `R`  restart the simulation with random positions
 
 ## how to run it
 
-1. install pygame
+1. install pygame :
    pip install pygame
 2. add your own sound files to a /sounds folder (or delete the music lines)
 3. run it
