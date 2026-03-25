@@ -19,7 +19,7 @@ it's also my first project !
 
 1. install pygame :
    pip install pygame
-2. add music and sounds effect in a folder called "sounds" and make sure the music name is : UpPiano.mp3. the hit sound effect : 8-Bit Hit.mp3. and the fission : special hit.mp3
+2. add sound effects in a folder called "sounds" and make sure the hit sound effect name is : 8-Bit Hit.mp3. and the fission sound effect name is : special hit.mp3
 3. run it
 
 ## built with
