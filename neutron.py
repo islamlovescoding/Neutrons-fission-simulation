@@ -8,10 +8,6 @@ pygame.mixer.init()
 pygame.mixer.set_num_channels(600) # change this depending on the atoms and neutrons number so the sound isnt going to be delayed
 #also if the number are generaly bigger than 15 consider deleting the sound effects all togther 
 
-#i loaded the background music you can delete this part or add your own mp3 file!
-pygame.mixer.music.load("sounds/UpPiano.mp3")
-pygame.mixer.music.set_volume(0.3)
-pygame.mixer.music.play(-1)
 #the sound effects for the ball hitting the wall, you can also delete this or change it and delete the hit.play() part
 hit = pygame.mixer.Sound("sounds/8-Bit Hit.mp3")
 hit.set_volume(0.01)
